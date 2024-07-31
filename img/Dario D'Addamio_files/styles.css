@@ -1,0 +1,61 @@
+* {
+    color: white;
+    background-color: rgb(0, 0, 0);
+    outline: 2px solid rgb(128, 128, 226);
+}
+
+.anchors
+{
+    text-decoration: none;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+}
+.logo {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    opacity: 0;
+    transition: opacity 2s ease-in, transform 2s ease-in-out;
+    fill: #FFF;
+    cursor: pointer;
+    outline: 10px solid rgb(128, 128, 226);
+}
+.logo-shrink {
+
+}
+.fade-in {
+    opacity: 1;
+}
+
+.image-grid { /* Flexbox container for images */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Adds space between images */
+    padding: 10px;
+}
+
+.image-grid img { /* Flexbox items (images) */
+    flex: 1 1 calc(33.33% - 10px); /* Adjusts to 50% width minus the gap */
+    /* flex-grow | flex-shrink | flex-basis | are shortened to flex, the shorthand for it */
+    /* grow and shrink the same */
+    
+    /* basis defines the size of an item before the remaining space is distributed, inthis case, it is being calculated to spread them eavenly in 3 columns (33.33%) */
+
+    max-width: calc(33.33% - 10px); /* Ensures images don't exceed 50% width */
+    object-fit: contain;
+}
+
+
+button {
+    margin: 10px;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    justify-self: center;
+}
